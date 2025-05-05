@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicago Cafe Documentary</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body { margin: 0; font-family: Arial, sans-serif; background: #111; color: #fff; }
+    nav {
+      position: sticky;
+      top: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      z-index: 999;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #e50914;
+    }
+    header { background: url('poster-placeholder.jpg') center/cover no-repeat; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 1rem; }
+    header h1 { font-size: 3rem; margin: 0; }
+    header p { font-size: 1.2rem; margin: 1rem 0; }
+    header a.button { background: #e50914; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    section { padding: 4rem 2rem; max-width: 800px; margin: auto; }
+    h2 { color: #e50914; }
+    iframe { width: 100%; height: 400px; margin-top: 1rem; border: none; }
+    footer { text-align: center; padding: 2rem; background: #000; }
+    a { color: #e50914; }
+    .social-media {
+      background: #222;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .social-media h2 { margin-bottom: 1rem; }
+    .insta-feed {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .insta-feed img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #e50914;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: none;
+      z-index: 1000;
+    }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      header p { font-size: 1rem; }
+      iframe { height: 250px; }
+      nav { flex-wrap: wrap; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#trailer">Trailer</a>
+    <a href="#about">About</a>
+    <a href="#behind-the-scenes">Cast</a>
+    <a href="#press">Press</a>
+    <a href="#social">Gallery</a>
+  </nav>
+
+  <header>
+    <h1>CHICAGO CAFE</h1>
+    <p>A story of hope, legacy, and what remains in the dark</p>
+    <a href="#trailer" class="button">Watch Trailer</a>
+  </header>
+
+  <section id="trailer">
+    <h2>Watch the Trailer</h2>
+    <iframe src="https://www.youtube.com/embed/your-trailer-id" allowfullscreen></iframe>
+  </section>
+
+  <section id="about">
+    <h2>About the Film</h2>
+    <p><em>Chicago Cafe</em> is a documentary about the oldest Chinese restaurant in America—and the family who kept it going for over 100 years. When chef-owner Paul Fong steps into the spotlight, he must decide what to do with a legacy that spans three generations, shaped by immigration, resilience, and community. As he nears retirement, the question looms: what happens next?</p>
+  </section>
+
+  <section id="behind-the-scenes">
+    <h2>Cast & Behind the Scenes</h2>
+    <p>Meet the talented cast and creative team that brought <em>Chicago Cafe</em> to life. Behind the camera and in front of it, each person helped shape the emotional journey of this documentary.</p>
+  </section>
+
+  <section id="press">
+    <h2>Press & Accolades</h2>
+    <p>"A poignant and visually stunning film that lingers long after the credits roll." — Festival Weekly</p>
+    <p>"A powerful meditation on loss, memory, and the spaces in between." — Indie Reel</p>
+  </section>
+
+  <section class="social-media" id="social">
+    <h2>Gallery & Connect</h2>
+    <p>Follow us on <a href="https://www.instagram.com/chicagocafedoc" target="_blank">Instagram</a> for updates.<br>
+    Contact us: <a href="mailto:kristiechow@gmail.com">Kristie</a></p>
+    <div class="insta-feed">
+      <!-- Placeholder images: Replace with Instagram API or plugin if needed -->
+      <img src="https://via.placeholder.com/100" alt="Instagram post 1">
+      <img src="https://via.placeholder.com/100" alt="Instagram post 2">
+      <img src="https://via.placeholder.com/100" alt="Instagram post 3">
+      <img src="https://via.placeholder.com/100" alt="Instagram post 4">
+    </div>
+  </section>
+
+  <button class="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
+
+  <footer>
+    <p>&copy; 2025 Chicago Cafe Documentary. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const scrollBtn = document.querySelector('.scroll-to-top');
+    window.addEventListener('scroll', () => {
+      scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+  </script>
+</body>
+</html>
