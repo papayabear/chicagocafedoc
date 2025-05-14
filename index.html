@@ -51,7 +51,7 @@
       margin-bottom: 2rem;
     }
     header p {
-      font-size: 1.5rem;
+      font-size: 1rem;
       margin: 0;
       color: #ffffff;
       max-width: 700px;
@@ -143,10 +143,71 @@
   </nav>
 
   <header>
-    <img src="title.png" alt="Chicago Cafe Documentary Title">
+    <img src="titlecolor.png" alt="Chicago Cafe Documentary Title">
     <p>Legacy might not be about holding on to the oldest Chinese restaurant in the country.</p>
   </header>
 
-  <!-- (remaining content unchanged) -->
+  <section id="trailer">
+  <h2>Watch the Trailer</h2>
+  <iframe src="https://www.youtube.com/embed/your-trailer-id" allowfullscreen></iframe>
+</section>
+
+<section id="about">
+  <h2>About the Film</h2>
+  <p>Chicago Cafe in Woodland, California is possibly the oldest continuously operating Chinese restaurant in the country. It still serves chow mein the way it was made in the early 20th century: crispy noodles topped with bean sprouts—the kind of dish that once defined Chinese American cooking but has nearly disappeared. Run by the same family for over a century, it’s also the last trace of the town’s former Chinatown—and the final business owned by the Fong family.</p>
+  <p>The restaurant went viral in 2024, landing on the front page of the Los Angeles Times and featured on PBS, BBC, and local TV. Customers came from across the country. In early 2025, Paul Fong, the third-generation owner, put it up for sale. But walking away isn’t simple: the building is aging, the permits are grandfathered, and the place holds a lifetime of meaning.</p>
+  <p>This short film follows Paul and his wife Nancy beyond the kitchen, capturing who they are outside of the headlines. With access to home videos and quiet moments away from the dining room, it offers a more intimate look at everyday immigrant life—at the edge of legacy and letting go.</p>
+</section>
+
+<section id="behind-the-scenes">
+  <h2>Cast & Behind the Scenes</h2>
+  <p><strong>Directed by</strong><br>Kristie Chow & Jeffrey Wu</p>
+  <p><strong>Produced by</strong><br>Kristie Chow</p>
+  <p><strong>Director of Photography</strong><br>Jeffrey Wu</p>
+  <p><strong>Editor</strong><br>Kristie Chow</p>
+  <p><strong>Additional Camera</strong><br>Terry Shieh</p>
+  <p><strong>Sound</strong><br>David Gulbis</p>
+  <p><strong>Original Score by</strong><br>Orange Leung</p>
+  <p><strong>Featuring</strong><br>Paul Fong<br>Nancy Fong<br>Dianna Olstad<br>Brandon Jew<br>Burke Fong</p>
+</section>
+
+<section id="press">
+  <h2>Press & Contact</h2>
+  <p><strong>Short Synopsis:</strong><br>
+  In a small California town, a 100-year-old Chinese restaurant gets ready to close. As Paul Fong retires, this short film follows him and his wife Nancy beyond the headlines—through quiet moments, old family footage, and the slow process of letting go.</p>
+  <p><strong>Contact:</strong><br>
+  Email: <a href="mailto:chicagocafedoc@gmail.com">chicagocafedoc@gmail.com</a><br>
+  Website: <a href="https://www.chicagocafedoc.com">www.chicagocafedoc.com</a><br>
+  Instagram: <a href="https://www.instagram.com/chicagocafedoc" target="_blank">@chicagocafedoc</a></p>
+  <p><strong>Press Assets:</strong><br>
+  <a href="#">Watch Trailer</a><br>
+  <a href="#">Download Stills</a><br>
+  <a href="#">Download Poster</a></p>
+</section>
+
+<section class="social-media" id="social">
+  <h2>Gallery & Connect</h2>
+  <p>Follow us on <a href="https://www.instagram.com/chicagocafedoc" target="_blank">Instagram</a> and <a href="#">YouTube</a> for updates.<br>
+  Contact us: <a href="mailto:chicagocafedoc@gmail.com">chicagocafedoc@gmail.com</a></p>
+  <div class="insta-feed">
+    <img src="https://via.placeholder.com/100" alt="Instagram post 1">
+    <img src="https://via.placeholder.com/100" alt="Instagram post 2">
+    <img src="https://via.placeholder.com/100" alt="Instagram post 3">
+    <img src="https://via.placeholder.com/100" alt="Instagram post 4">
+  </div>
+</section>
+
+<button class="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
+
+<footer>
+  <p>&copy; 2025 Chicago Cafe Documentary. All rights reserved.</p>
+</footer>
+
+<script>
+  const scrollBtn = document.querySelector('.scroll-to-top');
+  window.addEventListener('scroll', () => {
+    scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+</script>
 </body>
 </html>
