@@ -10,7 +10,6 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #fdfaf6;
       color: #333;
       font-weight: 300;
       line-height: 1.6;
@@ -21,7 +20,7 @@
       top: 0;
       background: #fdfaf6;
       display: flex;
-      justify-content: center;
+      justify-content: right;
       gap: 2rem;
       padding: 1rem 2rem;
       z-index: 999;
@@ -53,14 +52,14 @@
 
     header img {
       width: 50%;
-      max-width: 500px;
+      max-width: 600px;
       height: auto;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem 0 0 0;
     }
 
     header p {
       font-family: 'Playfair Display', serif;
-      font-size: 0.85rem;
+      font-size: 0.7rem;
       margin: 0;
       color: #ffffff;
       max-width: 500px;
@@ -69,16 +68,52 @@
 
     section {
       padding: 5rem 2rem;
-      max-width: 800px;
-      margin: auto;
+      color: #000;
+    }
+
+    #about {
+      background-color: #f6f0d8;
+    }
+
+    #credits {
+      background-color: #e8edf5;
+    }
+
+    #press {
+      background-color: #f6f0d8;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    #press img {
+      max-width: 300px;
+      height: auto;
+      flex-shrink: 0;
+    }
+
+    #press .press-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    #connect {
+      background-color: #e8edf5;
     }
 
     h2 {
-      color: #013e75;
+      color: inherit;
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
       font-weight: 600;
       margin-bottom: 1.5rem;
+    }
+
+    a {
+      color: #679cfd;
+      text-decoration: underline;
     }
 
     iframe {
@@ -91,38 +126,21 @@
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
-    }
-
-    .social-media {
-      background: #f1f1f1;
-      color: #013e75;
-      padding: 5rem 2rem;
-      text-align: center;
-    }
-
-    .insta-feed {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .insta-feed img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 8px;
+      background-color: #013e75;
+      color: #fff;
     }
 
     @media (max-width: 768px) {
       header img {
-        width: 70%;
+        width: 80%;
       }
       header p {
-        font-size: 0.75rem;
+        font-size: 0.65rem;
         padding: 0 1rem;
       }
+      header {
+    background-position: 15% center;
+  }
       nav {
         flex-wrap: wrap;
         gap: 1rem;
@@ -130,6 +148,13 @@
       }
       iframe {
         height: 250px;
+      }
+      #press {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      #press img {
+        max-width: 100%;
       }
     }
   </style>
@@ -139,7 +164,7 @@
     <a href="#about">About</a>
     <a href="#credits">Credits</a>
     <a href="#press">Press</a>
-    <a href="#contact">Contact</a>
+    <a href="#connect">Connect</a>
   </nav>
 
   <header>
@@ -152,6 +177,7 @@
     <p>Chicago Cafe in Woodland, California is possibly the oldest continuously operating Chinese restaurant in the country. It still serves chow mein the way it was made in the early 20th century: crispy noodles topped with bean sprouts—the kind of dish that once defined Chinese American cooking but has nearly disappeared. Run by the same family for over a century, it’s also the last trace of the town’s former Chinatown—and the final business owned by the Fong family.</p>
     <p>The restaurant went viral in 2024, landing on the front page of the Los Angeles Times and featured on PBS, BBC, and local TV. Customers came from across the country. In early 2025, Paul Fong, the third-generation owner, put it up for sale. But walking away isn’t simple: the building is aging, the permits are grandfathered, and the place holds a lifetime of meaning.</p>
     <p>This short film follows Paul and his wife Nancy beyond the kitchen, capturing who they are outside of the headlines. With access to home videos and quiet moments away from the dining room, it offers a more intimate look at everyday immigrant life—at the edge of legacy and letting go.</p>
+    <iframe src="https://www.youtube.com/embed/YOUR_TRAILER_ID" allowfullscreen></iframe>
   </section>
 
   <section id="credits">
@@ -168,13 +194,32 @@
 
   <section id="press">
     <h2>Press</h2>
-    <p><a href="#">Watch Trailer</a> | <a href="#">Download Stills</a> | <a href="#">Download Poster</a></p>
+    <img src="poster.jpg" alt="Chicago Cafe Poster">
+    <div class="press-links">
+      <a href="https://docs.google.com/presentation/d/1O-oRZujZRm_hiP1nQAtqAfPuXlQIPB-hY8o7HCZrg1E/edit?usp=drive_link">Download EPK</a>
+      <a href="https://drive.google.com/drive/folders/175OzozW5XxqDNB5oj6e-EpinZaSBn-hv?usp=sharing">Download Stills</a>
+      <a href="https://drive.google.com/file/d/1hwyUbocf7jAZQW49Xv9c-4REIODrJwfs/view?usp=drive_link">Download Poster</a>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
+  <section id="connect">
+    <h2>Connect</h2>
+    <div class="embedsocial-hashtag" data-ref="e7db0ded17911a711cf9e0e4a6c23d3461815987">
+      <a class="feed-powered-by-es feed-powered-by-es-feed-img es-widget-branding" href="https://embedsocial.com/social-media-aggregator/" target="_blank" title="Instagram widget">
+        <img src="https://embedsocial.com/cdn/icon/embedsocial-logo.webp" alt="EmbedSocial">
+        <div class="es-widget-branding-text">Instagram widget</div>
+      </a>
+    </div>
+    <script>
+      (function(d, s, id) {
+        var js;
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s); js.id = id;
+        js.src = "https://embedsocial.com/cdn/ht.js";
+        d.getElementsByTagName("head")[0].appendChild(js);
+      }(document, "script", "EmbedSocialHashtagScript"));
+    </script>
     <p>Email: chicagocafedoc@gmail.com<br>
-    Website: www.chicagocafedoc.com<br>
     Instagram: @chicagocafedoc</p>
   </section>
 
