@@ -6,6 +6,8 @@
   <title>Chicago Cafe Documentary</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Brandon+Grotesque:wght@500&display=swap');
+
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
@@ -20,8 +22,8 @@
       top: 0;
       background: #fdfaf6;
       display: flex;
-      justify-content: right;
-      gap: 2rem;
+      justify-content: space-between;
+      align-items: center;
       padding: 1rem 2rem;
       z-index: 999;
       font-weight: 400;
@@ -29,17 +31,30 @@
       border-bottom: 1px solid #e0d9c9;
     }
 
-    nav a {
+    .nav-title {
+      font-family: 'Brandon Grotesque', sans-serif;
+      font-size: 1rem;
+      color: #013e75;
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
       color: #013e75;
       text-decoration: none;
       letter-spacing: 0.5px;
     }
-    nav a:hover {
+
+    .nav-links a:hover {
       color: #eac804;
     }
 
     header {
-      background: url('header.jpg') center center / cover no-repeat;
+      background: url('header.jpg') 15% center / cover no-repeat;
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -51,10 +66,10 @@
     }
 
     header img {
-      width: 50%;
-      max-width: 600px;
+      width: 60%;
+      max-width: 500px;
       height: auto;
-      margin-bottom: 2rem 0 0 0;
+      margin-bottom: 1.5rem;
     }
 
     header p {
@@ -81,16 +96,13 @@
 
     #press {
       background-color: #f6f0d8;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 2rem;
     }
 
     #press img {
       max-width: 300px;
       height: auto;
-      flex-shrink: 0;
+      display: block;
+      margin-bottom: 1rem;
     }
 
     #press .press-links {
@@ -101,6 +113,11 @@
 
     #connect {
       background-color: #e8edf5;
+    }
+
+    .embedsocial-hashtag {
+      width: 75%;
+      margin: 0 auto 2rem auto;
     }
 
     h2 {
@@ -131,6 +148,9 @@
     }
 
     @media (max-width: 768px) {
+      header {
+        background-position: 20% center;
+      }
       header img {
         width: 80%;
       }
@@ -138,9 +158,6 @@
         font-size: 0.65rem;
         padding: 0 1rem;
       }
-      header {
-    background-position: 15% center;
-  }
       nav {
         flex-wrap: wrap;
         gap: 1rem;
@@ -149,22 +166,18 @@
       iframe {
         height: 250px;
       }
-      #press {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      #press img {
-        max-width: 100%;
-      }
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="#about">About</a>
-    <a href="#credits">Credits</a>
-    <a href="#press">Press</a>
-    <a href="#connect">Connect</a>
+    <div class="nav-title">Chicago Cafe Documentary</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#credits">Credits</a>
+      <a href="#press">Press</a>
+      <a href="#connect">Connect</a>
+    </div>
   </nav>
 
   <header>
@@ -194,11 +207,11 @@
 
   <section id="press">
     <h2>Press</h2>
-    <img src="poster.jpg" alt="Chicago Cafe Poster">
+    <p><img src="poster.jpg" alt="Chicago Cafe Poster"></p>
     <div class="press-links">
-      <a href="https://docs.google.com/presentation/d/1O-oRZujZRm_hiP1nQAtqAfPuXlQIPB-hY8o7HCZrg1E/edit?usp=drive_link">Download EPK</a>
-      <a href="https://drive.google.com/drive/folders/175OzozW5XxqDNB5oj6e-EpinZaSBn-hv?usp=sharing">Download Stills</a>
-      <a href="https://drive.google.com/file/d/1hwyUbocf7jAZQW49Xv9c-4REIODrJwfs/view?usp=drive_link">Download Poster</a>
+      <a href="#">Download EPK</a>
+      <a href="#">Download Stills</a>
+      <a href="#">Download Poster</a>
     </div>
   </section>
 
@@ -220,6 +233,7 @@
       }(document, "script", "EmbedSocialHashtagScript"));
     </script>
     <p>Email: chicagocafedoc@gmail.com<br>
+    Website: www.chicagocafedoc.com<br>
     Instagram: @chicagocafedoc</p>
   </section>
 
