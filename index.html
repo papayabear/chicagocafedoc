@@ -6,10 +6,8 @@
   <title>Chicago Cafe Documentary</title>
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Brandon+Grotesque:wght@500&display=swap');
-
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
@@ -20,9 +18,9 @@
     }
 
     nav {
-      position: sticky;
+      position: absolute;
       top: 0;
-      background: #fdfaf6;
+      width: 100%;
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -30,24 +28,34 @@
       z-index: 999;
       font-weight: 400;
       font-size: 0.95rem;
-      border-bottom: 1px solid #e0d9c9;
     }
 
     .nav-links {
       display: flex;
       gap: 2rem;
-      justify-content: flex-end;
-      width: 100%;
     }
 
     .nav-links a {
-      color: #013e75;
+      color: #ffffff;
       text-decoration: none;
       letter-spacing: 0.5px;
     }
 
     .nav-links a:hover {
       color: #eac804;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
     }
 
     header {
@@ -181,10 +189,39 @@
         width: 100%;
       }
     }
+
+    .background-video-wrapper {
+  color: #fff;
+  background: #000;
+  text-align: center;
+  position: relative;
+  video {
+    opacity:.5;
+    background: #000;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  .copy {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin: 10vmax 4rem;
+  }
+}
+
   </style>
 </head>
 <body>
   <nav>
+    <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#credits">Credits</a>
@@ -197,13 +234,24 @@
     <img src="titlecolor.png" alt="Chicago Cafe Documentary">
     <p>Legacy might not be about holding on to the oldest Chinese restaurant in the country.</p>
   </header>
+  
+  <div class="background-video-wrapper">
+  <video class="background-video" preload="auto" autoplay loop muted playsinline poster="https://deepspacerobots.netlify.app/assets/video/galaxy-poster.jpg">
+    <source src="https://storage.googleapis.com/chicagocafedoc/website.mp4" type="video/mp4">
+  </video>
+  <div class="fade"></div>
+  <div class="copy">
+    <img src="titlecolor.png" alt="Chicago Cafe Documentary">
+    <p>Legacy might not be about holding on to the oldest Chinese restaurant in the country.</p>
+  </div>
+</div>
 
   <section id="about">
     <h2>About</h2>
     <p>Chicago Cafe in Woodland, California is possibly the oldest continuously operating Chinese restaurant in the country. It still serves chow mein the way it was made in the early 20th century: crispy noodles topped with bean sprouts—the kind of dish that once defined Chinese American cooking but has nearly disappeared. Run by the same family for over a century, it’s also the last trace of the town’s former Chinatown—and the final business owned by the Fong family.</p>
     <p>The restaurant went viral in 2024, landing on the front page of the Los Angeles Times and featured on PBS, BBC, and local TV. Customers came from across the country. In early 2025, Paul Fong, the third-generation owner, put it up for sale. But walking away isn’t simple: the building is aging, the permits are grandfathered, and the place holds a lifetime of meaning.</p>
     <p>This short film follows Paul and his wife Nancy beyond the kitchen, capturing who they are outside of the headlines. With access to home videos and quiet moments away from the dining room, it offers a more intimate look at everyday immigrant life—at the edge of legacy and letting go.</p>
-    <iframe src="https://www.youtube.com/embed/SS8c7pCJhnQ" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/au-LkR6dEws" allowfullscreen></iframe>
   </section>
 
   <section id="credits">
