@@ -59,15 +59,24 @@
     }
 
     header {
-      background: url('header.jpg') 15% center / cover no-repeat;
+      position: relative;
       height: 100vh;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 2rem;
-      position: relative;
+    }
+
+    header video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
 
     header img {
@@ -78,7 +87,6 @@
     }
 
     header p {
-      font-family: 'Playfair Display', serif;
       font-size: 0.7rem;
       margin: 0;
       color: #ffffff;
@@ -108,6 +116,18 @@
       height: auto;
       display: block;
       margin-bottom: 1rem;
+    }
+
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .slider img {
+      max-height: 200px;
+      border-radius: 6px;
     }
 
     #press .press-links {
@@ -141,7 +161,6 @@
 
     h2 {
       color: inherit;
-      font-family: 'Playfair Display', serif;
       font-size: 2rem;
       font-weight: 600;
       margin-bottom: 1.5rem;
@@ -162,57 +181,41 @@
     }
 
     @media (max-width: 768px) {
-      header {
-        background-position: 20% center;
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 1rem;
       }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
       header img {
         width: 90%;
       }
-      header p {
-        font-size: 0.65rem;
-        padding: 0 1rem;
-      }
-      nav {
-        flex-wrap: wrap;
-        gap: 1rem;
-        font-size: 0.85rem;
-        justify-content: center;
-      }
+
       iframe {
         width: 90%;
         height: 250px;
       }
+
       section > * {
         max-width: 90%;
       }
+
       .embedsocial-hashtag {
         width: 100%;
       }
     }
-
-    .background-video-wrapper {
-  color: #fff;
-  background: #000;
-  text-align: center;
-  position: relative;
-  video {
-    opacity:.5;
-    background: #000;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-  }
-  .copy {
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-    margin: 10vmax 4rem;
-  }
-}
-
   </style>
 </head>
 <body>
@@ -229,16 +232,14 @@
       <a href="#connect">Connect</a>
     </div>
   </nav>
-  <div class="background-video-wrapper">
-  <video class="background-video" preload="auto" autoplay loop muted playsinline poster="https://deepspacerobots.netlify.app/assets/video/galaxy-poster.jpg">
-    <source src="https://storage.googleapis.com/chicagocafedoc/website.mp4" type="video/mp4">
-  </video>
-  <div class="fade"></div>
-  <div class="copy">
+
+  <header>
+    <video autoplay muted loop playsinline>
+      <source src="https://storage.googleapis.com/chicagocafedoc/website.mp4" type="video/mp4">
+    </video>
     <img src="titlecolor.png" alt="Chicago Cafe Documentary">
     <p>Legacy might not be about holding on to the oldest Chinese restaurant in the country.</p>
-  </div>
-</div>
+  </header>
 
   <section id="about">
     <h2>About</h2>
@@ -262,7 +263,12 @@
 
   <section id="press">
     <h2>Press</h2>
-    <p><img src="poster.jpg" alt="Chicago Cafe Poster"></p>
+    <div class="slider">
+      <img src="poster.jpg" alt="Chicago Cafe Poster">
+      <img src="still1.jpg" alt="Still 1">
+      <img src="still2.jpg" alt="Still 2">
+      <img src="still3.jpg" alt="Still 3">
+    </div>
     <div class="press-links">
       <a href="#">Download EPK</a>
       <a href="#">Download Stills</a>
