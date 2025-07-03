@@ -8,9 +8,11 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    html { scroll-behavior: smooth; }
-    body {
+    html, body {
+      scroll-behavior: smooth;
       margin: 0;
+      padding: 0;
+      overflow-x: hidden;
       font-family: 'Inter', sans-serif;
       color: #333;
       font-weight: 300;
@@ -20,14 +22,13 @@
     nav {
       position: absolute;
       top: 0;
-      width: 100%;
+      left: 0;
+      right: 0;
       display: flex;
       justify-content: flex-end;
       align-items: center;
       padding: 1rem 2rem;
       z-index: 1000;
-      font-weight: 400;
-      font-size: 0.95rem;
     }
 
     .nav-links {
@@ -36,7 +37,7 @@
     }
 
     .nav-links a {
-      color: #ffffff;
+      color: #fff;
       text-decoration: none;
       letter-spacing: 0.5px;
     }
@@ -73,8 +74,8 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       object-fit: cover;
       z-index: -1;
     }
@@ -101,10 +102,6 @@
 
     #about {
       background-color: #f6f0d8;
-    }
-
-    #credits {
-      background-color: #e8edf5;
     }
 
     #press {
@@ -154,7 +151,7 @@
     iframe {
       display: block;
       margin: 2rem auto;
-      width: 50%;
+      width: 100%;
       height: 400px;
       border: none;
     }
@@ -209,7 +206,7 @@
       }
 
       iframe {
-        width: 90%;
+        width: 100%;
         height: 250px;
       }
 
@@ -232,7 +229,6 @@
     </div>
     <div class="nav-links">
       <a href="#about">About</a>
-      <a href="#credits">Credits</a>
       <a href="#press">Press</a>
       <a href="#connect">Connect</a>
     </div>
@@ -248,14 +244,7 @@
 
   <section id="about">
     <h2>About</h2>
-    <p>Chicago Cafe in Woodland, California is possibly the oldest continuously operating Chinese restaurant in the country. It still serves chow mein the way it was made in the early 20th century: crispy noodles topped with bean sprouts—the kind of dish that once defined Chinese American cooking but has nearly disappeared. Run by the same family for over a century, it’s also the last trace of the town’s former Chinatown—and the final business owned by the Fong family.</p>
-    <p>The restaurant went viral in 2024, landing on the front page of the Los Angeles Times and featured on PBS, BBC, and local TV. Customers came from across the country. In early 2025, Paul Fong, the third-generation owner, put it up for sale. But walking away isn’t simple: the building is aging, the permits are grandfathered, and the place holds a lifetime of meaning.</p>
-    <p>This short film follows Paul and his wife Nancy beyond the kitchen, capturing who they are outside of the headlines. With access to home videos and quiet moments away from the dining room, it offers a more intimate look at everyday immigrant life—at the edge of legacy and letting go.</p>
-    <iframe src="https://www.youtube.com/embed/au-LkR6dEws" allowfullscreen></iframe>
-  </section>
-
-  <section id="credits">
-    <h2>Credits</h2>
+    <p>In a small California town, a 100-year-old Chinese restaurant gets ready to close. As Paul Fong retires, this short film follows him and his wife Nancy beyond the headlines—through quiet moments, old family footage, and the slow process of letting go.</p>
     <p><strong>Directed by:</strong> Kristie Chow & Jeffrey Wu<br>
     <strong>Produced by:</strong> Kristie Chow<br>
     <strong>Director of Photography:</strong> Jeffrey Wu<br>
@@ -264,15 +253,15 @@
     <strong>Sound:</strong> David Gulbis<br>
     <strong>Original Score:</strong> Orange Leung<br>
     <strong>Featuring:</strong> Paul Fong, Nancy Fong, Dianna Olstad, Brandon Jew, Burke Fong</p>
+    <iframe src="https://www.youtube.com/embed/au-LkR6dEws" allowfullscreen></iframe>
   </section>
 
   <section id="press">
     <h2>Press</h2>
     <div class="slider">
-      <img src="poster.jpg" alt="Chicago Cafe Poster">
-      <img src="still1.jpg" alt="Still 1">
-      <img src="still2.jpg" alt="Still 2">
-      <img src="still3.jpg" alt="Still 3">
+      <img src="press1.jpg" alt="Press 1">
+      <img src="press2.jpg" alt="Press 2">
+      <img src="press3.jpg" alt="Press 3">
     </div>
     <div class="press-links">
       <a href="#">Download EPK</a>
